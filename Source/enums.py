@@ -21,9 +21,15 @@ class OSEnum(Enum):
 class DataGroupEnum(Enum):
     """The groups that will be used which depends on the experiment done
     """
-    MULTIPLE_MUTEXES='/optimizations/multiple_mutexes'
-    LOCK_FREE='/optimizations/lock_free'
-    USELESS_OPTIMIZATIONS='/case_studies/useless_optimizations'
-    FAILING_EMISSIONS='/case_studies/failing_emissions'
-    TASK_TYPES='/case_studies/task_types'
-    OBJECT_CONTENTION='/case_studies/object_contention'
+    ORIGINAL_LOOPING='/no_changes/looping'
+    ORIGINAL_NOT_LOOPING='/no_changes/not_looping'
+    INITIAL_RESULTS='/initial_results'
+    MULTIPLE_MUTEXES='/optimization_case_studies/multiple_mutexes'
+    LOCK_FREE='/optimization_case_studies/lock_free'
+    COPIES='/observation_studies/copying_data'
+    NO_COPIES='/observation_studies/copying_data/no_cpd_object'
+    TASKS='/observation_studies/task_scheduling'
+    GAME_LOGIC_TASKS='/observation_studies/task_scheduling/game_logic_tasks'
+    NOT_THREADED='/observation_studies/task_scheduling/not_threaded'
+    FAILURE='/observation_studes/emission_failure'
+    FAILURE_SOLUTION='/observation_studies/emission_failure/solution'

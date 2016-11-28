@@ -2,7 +2,7 @@ from argparse import ArgumentParser, ArgumentTypeError
 from datetime import datetime
 from enums import OSEnum, DataGroupEnum
 import argument_actions as arg_actions
-import sys
+import sys, os
 
 class Arguments(object):
     """Uses ArgumentParser to gather and parse arguments given by the user in the command line.
@@ -66,6 +66,7 @@ class Arguments(object):
         self.dataset_name = args['dataset_name']
         self.len_diff_threshold = args['len_diff_threshold']
         self.data_input_csvs = args['data_input_dir']
+        self.data_input_dir = os.path.basename( os.path.dirname(self.data_input_csvs[0]) )
         self.HDF5_output_file = args['HDF5_output_file']
         self.data_group = DataGroupEnum[args['data_group']]
         self.OS = OSEnum[args['OS']]
